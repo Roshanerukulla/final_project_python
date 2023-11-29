@@ -5,6 +5,10 @@ from nltk.probability import FreqDist
 from nltk.corpus import stopwords 
 import spacy
 from gensim import corpora, models
+import nltk
+nltk.download('stopwords')
+stop_words = set(nltk.corpus.stopwords.words('english'))
+
 
 class ModelTrainer:
     def __init__(self, data_path):
@@ -14,9 +18,7 @@ class ModelTrainer:
 
     def _preprocess_data(self):
         # Explicitly import stopwords from nltk.corpus
-        from nltk.corpus import stopwords
-
-        stop_words = set(stopwords.words('english'))
+            
         self.df['Text'] = self.df['Text'].apply(lambda x: re.sub("[^a-zA-Z]", " ", str(x)).lower())
         self.df['OriginalComment'] = self.df['Text']  # Create an 'OriginalComment' column with the original comments
         self.df['Text'] = self.df['Text'].apply(lambda x: ' '.join([word for word in x.split() if word not in stop_words]))
