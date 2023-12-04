@@ -25,7 +25,7 @@ class StreamlitUI:
             st.write("----")
 
     def run_app(self):
-        st.title("Topic Search App")
+       st.markdown("<h1 style='text-align: center;'>Topic Search App</h1>", unsafe_allow_html=True)
 
         # Add a button to trigger the display when the slider value changes
         if st.button("Display Comments"):
