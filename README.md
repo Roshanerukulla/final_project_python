@@ -1,6 +1,7 @@
 # final_project_python
 
 DATA MINING ON AMAZON FOOD REVIEWS USING TOPIC MODELLING
+APP-URL : https://finalprojectpython.streamlit.app/
 
 ##PROBLEM STATEMENT:
 In the realm of online reviews, the sheer volume of data and information can be overwhelming. The challenge is to develop an intelligent system that addresses this issue by efficiently extracting key insights, or topics, from these reviews. The goal is to provide a streamlined and insightful analysis of the extensive information contained in online reviews, enabling a more accessible and meaningful understanding of user sentiments and preferences.
